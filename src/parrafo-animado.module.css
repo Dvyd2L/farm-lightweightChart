@@ -1,0 +1,42 @@
+.typing-container {
+  white-space: pre; /* Mantiene los saltos de línea y espacios */
+  font-family: monospace;
+  font-size: 24px;
+}
+
+.typing-container p {
+  display: inline-block; /* Asegura que cada párrafo se trate como un bloque inline */
+  overflow: hidden;
+  border-right: 2px solid black; /* Cursor */
+  white-space: pre-wrap; /* Permite el salto de línea dentro del párrafo */
+  animation: typing 6s steps(60) 1s 1 normal both,
+    blinkCursor 500ms steps(60) infinite normal;
+}
+
+.typing-container p:nth-child(2) {
+  animation: typing 6s steps(60) 7s 1 normal both,
+    blinkCursor 500ms steps(60) infinite normal;
+}
+
+.typing-container p:nth-child(3) {
+  animation: typing 6s steps(60) 14s 1 normal both,
+    blinkCursor 500ms steps(60) infinite normal;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: black;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
